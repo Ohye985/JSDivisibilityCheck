@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Task 3</title>
+    <script type="text/javascript">
+    function divisibilityCheck(wholeNumber){
+        var wholenunber;
+        var integer = [];
+        for(var i = 1; i <= wholeNumber; i++){
+            integer.push(i);
+            
+            if((i % 2 === 0) && (i % 3 === 0) && (i % 5 === 0)){
+                var flow = integer.indexOf(i)
+                integer.splice(flow, flow, "yu-gi-oh");
+            }else if((i % 2 === 0)  && (i % 3 === 0) && (i % 5 !== 0)){
+                var flow = integer.indexOf(i)
+                integer.splice(flow, flow, "yu-gi");
+            }else if((i % 2 === 0) && (i % 3 !== 0) &&(i % 5 === 0)){
+                var flow = integer.indexOf(i)
+                integer.splice(flow, flow, "yu-oh")
+            }else if((i % 2 !== 0) && (i % 3 === 0) && (i % 5 === 0)){
+                var flow = integer.indexOf(i)
+                integer.splice(flow, flow, "gi-oh")
+            }else if(i % 2 === 0){
+                var flow = integer.indexOf(i)
+                integer.splice(flow, flow, "yu");
+            }else if(i % 3 === 0){
+                var flow = integer.indexOf(i)
+                integer.splice(flow, flow, "gi")
+            }else if(i % 5 === 0){
+                var flow = integer.indexOf(i)
+                integer.splice(flow, flow, "oh");
+            }
+            
+            
+
+        }
+        console.log(integer);
+        return integer;
+
+    }
+    divisibilityCheck(100);
+    divisibilityCheck(80);
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    <h1>JavaScript Task III</h1>
+    <p>Function, Conditions and Looping</p>
+</body>
+</html>
